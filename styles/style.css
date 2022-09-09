@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+nav{
+    display: inline;
+    align-items: center;
+    top: 8px;
+    position: relative;
+}
+
+ul{
+    display: inline;
+    margin: 0;
+    text-align: right;
+    padding: 0;
+    float: right;
+}
+
+li{
+    display: inline;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+header{
+    background-color: #39824a;
+    padding: 20px;
+    position: relative;
+}
