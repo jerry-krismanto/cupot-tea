@@ -33,6 +33,10 @@ li{
     margin: 0;
     font-weight: 400;
     letter-spacing: 3px;
+}
+
+li a{
+    text-decoration: none;
     color: #fff;
 }
 
