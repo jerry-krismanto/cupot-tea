@@ -5,17 +5,15 @@
     font-family: "poppins", sans-serif;
 }
 
-h1{
-    margin: 0;
-    padding: 0;
-    display: inline;
-}
-
 nav{
     display: inline;
     align-items: center;
-    top: 8px;
     position: relative;
+}
+
+nav ul{
+    position: relative;
+    bottom: 50px;
 }
 
 ul{
@@ -37,11 +35,82 @@ li{
 
 li a{
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
 header{
-    background-color: #39824a;
-    padding: 20px;
+    padding: 5px;
     position: relative;
+    box-shadow: 0 0px 10px 0 gray;
 }
+
+.logo{
+    position: relative;
+    left: 20px;
+}
+
+.logo img{
+    width: 75px;
+    height: 75px;
+}
+
+.logo h2{
+    color: black;
+    display: inline;
+    position: relative;
+    bottom: 25px;
+    margin-left: 5px;
+    font-size: 36px;
+}
+
+.banner{
+    margin: 30px;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px 0px gray;
+    position: relative;
+    background-color: #BBEFC6;
+}
+
+.banner h1{
+    padding: 20px;
+}
+
+.banner p{
+    padding: 20px;
+}
+
+.banner-button{
+    background-color: #BBEFC6;
+    border: solid 1px;
+    padding: 15px;
+    margin: 40px 0px 0px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+.banner-button:hover{
+    background-color: #9DCDA6;
+}
+
+.banner-image{
+    display: inline;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-image img{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
