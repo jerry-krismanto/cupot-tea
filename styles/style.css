@@ -14,9 +14,6 @@ nav{
 nav ul{
     position: relative;
     bottom: 50px;
-}
-
-ul{
     display: inline;
     margin: 0;
     text-align: right;
@@ -24,7 +21,7 @@ ul{
     float: right;
 }
 
-li{
+nav li{
     display: inline;
     list-style: none;
     padding: 20px;
@@ -33,7 +30,7 @@ li{
     letter-spacing: 3px;
 }
 
-li a{
+nav li a{ 
     text-decoration: none;
     color: black;
 }
@@ -116,7 +113,7 @@ header{
 
 .banner-1{
     margin: 30px;
-    padding: 240px;
+    padding: 120px 60px;
     justify-content: center;
     align-items: center;
     box-shadow: 0 5px 10px 0px gray;
@@ -125,15 +122,15 @@ header{
     overflow: hidden;
 }
 
-.banner-text-1{
-    position: absolute;
-    right   : 0;
+.banner-1 h1{
     padding: 20px;
-    margin: 20px;
-    display: inline;
     text-align: right;
 }
 
+.banner-1 p{
+    padding: 20px;
+    text-align: right;
+}
 
 .banner-image-1{
     display: inline;
@@ -150,4 +147,25 @@ header{
     width: 100%;
     max-height: 100%;
     object-fit: cover;
+}
+
+footer{
+    background-color: #2b6b32;
+    padding: 60px 30px;
+    color: #fff;
+    box-shadow: 0 0px 10px 0 black;
+}
+
+footer .about h1,li{
+    letter-spacing: 2px;
+}
+
+footer h2{
+    padding: 10px 0px;
+}
+
+footer li{
+    padding: 20px 0px;
+    text-decoration: none;
+    list-style: none;
 }
