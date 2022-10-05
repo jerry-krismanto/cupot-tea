@@ -82,11 +82,50 @@ header {
 }
 
 .catalogue{
-  border: solid 1px black;
   display: inline;
   right: 0;
   width: 70%;
   padding-left: 100px;
   position: absolute;
-  padding-top: 40px;
+  margin-top: 40px;
+  padding: 20px;
 }
+
+.menu-card{
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px 0px gray;
+}
+
+.menu-card-img img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.menu-card-content{
+  padding: 10px;
+}
+
+.menu-card-content h3{
+  padding: 10px;
+  text-align: center;
+}
+
+.card-button{
+  padding: 10px;
+  text-align: center;
+}
+
+.card-button a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #62d56f;
+}
+
+
