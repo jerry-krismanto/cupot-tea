@@ -65,6 +65,10 @@ header {
 .side-menu {
   padding-left: 100px;
   padding-top: 40px;
+  position: relative;
+  left: 0;
+  width: 25%;
+  display: inline-block;
 }
 
 .side-menu h3 {
@@ -75,4 +79,14 @@ header {
   padding: 10px;
   list-style: none;
   text-decoration: none;
+}
+
+.catalogue{
+  border: solid 1px black;
+  display: inline;
+  right: 0;
+  width: 70%;
+  padding-left: 100px;
+  position: absolute;
+  padding-top: 40px;
 }
