@@ -75,10 +75,15 @@ header {
   padding: 10px;
 }
 
-.side-menu li {
+.side-menu button {
   padding: 10px;
   list-style: none;
   text-decoration: none;
+  background: none !important;
+  border: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .catalogue{
@@ -126,6 +131,10 @@ header {
   padding: 10px;
   border-radius: 10px;
   background-color: #62d56f;
+}
+
+.card-button a:hover{
+  background-color: #4caf50;
 }
 
 
