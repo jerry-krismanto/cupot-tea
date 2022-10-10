@@ -48,6 +48,10 @@ header {
   left: 20px;
 }
 
+.logo a{
+  text-decoration: none;
+}
+
 .logo img {
   width: 75px;
   height: 75px;
@@ -135,6 +139,23 @@ header {
 
 .card-button a:hover{
   background-color: #4caf50;
+}
+
+.filter-div{
+  display: none;
+}
+
+.show{
+  display: inline-block;
+}
+
+.btn:hover{
+  left: 3px;
+  position: relative;
+}
+
+.btn.active{
+  color: #4caf50;
 }
 
 

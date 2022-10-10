@@ -11,9 +11,9 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
+            <div class="logo"><a href="index.html">
                 <img src="assets/logo/logo.png" alt="logo">
-                <h2>CupOT</h2>
+                <h2>CupOT</h2></a>
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,25 +24,23 @@
             </ul>
         </nav>
     </header>
-    <div class="side-menu">
-          <aside>
-            <h3>Hot Tea</h3>
-            <ul>
-                <button class="btn-active" onclick="filterSelection('classicBlack')">Classic Black</li>
-                <button class="btn-active" onclick="filterSelection('classicGreen')">Classic Green</button">
-                <button class="btn-active" onclick="filterSelection('herbal')">Herbal</button>
-                <button class="btn-active" onclick="filterSelection('oolong')">Oolong  </button>
-            </ul>
-            <h3>Iced Tea</h3>
-            <ul>
-                <button class="btn-active" onclick="filterSelection('blackFlavoured')">Black Flavoured</button>
-                <button class="btn-active" onclick="filterSelection('greenFlavoured')">Green Flavoured</button>
-                <button class="btn-active" onclick="filterSelection('blended')">Blended</button>
-            </ul>
-          </aside>
+    <div class="side-menu" id="menuBtnContainer">
+        <h3>Hot Tea</h3>
+        <ul>
+            <button class="btn active" onclick="filterSelection('classic-blk')">Classic Black</li>
+            <button class="btn" onclick="filterSelection('classic-grn')">Classic Green</button">
+            <button class="btn" onclick="filterSelection('herbal')">Herbal</button>
+            <button class="btn" onclick="filterSelection('oolong')">Oolong  </button>
+        </ul>
+        <h3>Iced Tea</h3>
+        <ul>
+            <button class="btn" onclick="filterSelection('blk-flav')">Black Flavoured</button>
+            <button class="btn" onclick="filterSelection('green-flav')">Green Flavoured</button>
+            <button class="btn" onclick="filterSelection('blended')">Blended</button>
+        </ul>
     </div>
-    <div class="catalogue filter-div">
-        <div class="menu-card">
+    <div class="catalogue">
+        <div class="menu-card filter-div classic-blk">
             <div class="menu-card-img">
                 <img src="assets/menu/earl-grey.jpg" alt="tea1">
             </div>
@@ -53,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu-card">
+        <div class="menu-card filter-div classic-blk">
             <div class="menu-card-img">
                 <img src="assets/menu/earl-grey.jpg" alt="tea1">
             </div>
@@ -64,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu-card">
+        <div class="menu-card filter-div classic-blk">
             <div class="menu-card-img">
                 <img src="assets/menu/earl-grey.jpg" alt="tea1">
             </div>
@@ -75,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu-card">
+        <div class="menu-card filter-div classic-blk">
             <div class="menu-card-img">
                 <img src="assets/menu/earl-grey.jpg" alt="tea1">
             </div>
@@ -86,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu-card">
+        <div class="menu-card filter-div classic-blk">
             <div class="menu-card-img">
                 <img src="assets/menu/earl-grey.jpg" alt="tea1">
             </div>
@@ -97,17 +95,51 @@
                 </div>
             </div>
         </div>
-        <div class="menu-card">
+        <div class="menu-card filter-div classic-blk">
             <div class="menu-card-img">
                 <img src="assets/menu/earl-grey.jpg" alt="tea1">
             </div>
             <div class="menu-card-content">
                 <h3>Classic Black</h3>
+                <div class="card-button">
+                    <a href="order.html">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card filter-div classic-grn">
+            <div class="menu-card-img">
+                <img src="assets/menu/green-tea.png" alt="tea1">
+            </div>
+            <div class="menu-card-content">
+                <h3>Classic Green</h3>
+                <div class="card-button">
+                    <a href="order.html">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card filter-div classic-grn">
+            <div class="menu-card-img">
+                <img src="assets/menu/green-tea.png" alt="tea1">
+            </div>
+            <div class="menu-card-content">
+                <h3>Classic Green</h3>
+                <div class="card-button">
+                    <a href="order.html">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card filter-div classic-grn">
+            <div class="menu-card-img">
+                <img src="assets/menu/green-tea.png" alt="tea1">
+            </div>
+            <div class="menu-card-content">
+                <h3>Classic Green</h3>
                 <div class="card-button">
                     <a href="order.html">Order Now</a>
                 </div>
             </div>
         </div>
     </div>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
