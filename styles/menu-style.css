@@ -48,7 +48,7 @@ header {
   left: 20px;
 }
 
-.logo a{
+.logo a {
   text-decoration: none;
 }
 
@@ -90,7 +90,7 @@ header {
   cursor: pointer;
 }
 
-.catalogue{
+.catalogue {
   display: inline;
   right: 0;
   width: 70%;
@@ -100,7 +100,7 @@ header {
   padding: 20px;
 }
 
-.menu-card{
+.menu-card {
   display: inline-block;
   width: 30%;
   margin: 10px;
@@ -109,27 +109,27 @@ header {
   box-shadow: 0 1px 6px 0px gray;
 }
 
-.menu-card-img img{
+.menu-card-img img {
   width: 100%;
   height: 200px;
   object-fit: contain;
 }
 
-.menu-card-content{
+.menu-card-content {
   padding: 10px;
 }
 
-.menu-card-content h3{
-  padding: 10px;
-  text-align: center;
-}
-
-.card-button{
+.menu-card-content h3 {
   padding: 10px;
   text-align: center;
 }
 
-.card-button a{
+.card-button {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-button a {
   text-decoration: none;
   color: white;
   padding: 10px;
@@ -137,25 +137,49 @@ header {
   background-color: #62d56f;
 }
 
-.card-button a:hover{
+.card-button a:hover {
   background-color: #4caf50;
 }
 
-.filter-div{
+.filter-div {
   display: none;
 }
 
-.show{
+.show {
   display: inline-block;
 }
 
-.btn:hover{
+.btn:hover {
   left: 3px;
   position: relative;
 }
 
-.btn.active{
+.btn.active {
   color: #4caf50;
 }
 
+/* make this page responsive */
+@media screen and (max-width: 768px) {
+  .side-menu {
+    display: block;
+    margin: 10px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+  }
+  .catalogue {
+    width: 100%;
+    padding-left: 0;
+  }
+  .menu-card {
+    width: 45%;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .menu-card {
+    width: 44%;
+    padding: 0;
+  }
+}

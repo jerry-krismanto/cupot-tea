@@ -48,7 +48,7 @@ header {
   left: 20px;
 }
 
-.logo a{
+.logo a {
   text-decoration: none;
 }
 
@@ -94,6 +94,25 @@ header {
   cursor: pointer;
   transition-duration: 0.4s;
   font-weight: bold;
+}
+
+.banner-button-right {
+  background-color: #bbefc6;
+  border: solid 1px;
+  padding: 15px;
+  margin: 40px 0px 0px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  position: absolute;
+  right: 80px;
+}
+
+.banner-button a {
+  text-decoration: none;
+  color: black;
 }
 
 .banner-button:hover {
@@ -176,4 +195,97 @@ footer li {
   text-decoration: none;
   list-style: none;
   font-weight: 200;
+}
+
+/* make this page responsive */
+@media only screen and (max-width: 768px) {
+  .banner {
+    margin: 30px;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px 0px gray;
+    position: relative;
+    background-color: #bbefc6;
+  }
+
+  .banner h1 {
+    padding: 20px;
+  }
+
+  .banner p {
+    padding: 20px;
+  }
+
+  .banner-button {
+    background-color: #bbefc6;
+    border: solid 1px;
+    padding: 15px;
+    margin: 40px 0px 0px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-weight: bold;
+  }
+
+  .banner-button-right {
+    background-color: #bbefc6;
+    border: solid 1px;
+    padding: 15px;
+    margin: 40px 0px 0px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    position: absolute;
+    right: 80px;
+  }
+
+  .banner-button a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .banner-button:hover {
+    background-color: #9dcda6;
+  }
+
+  .banner-image {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+  }
+
+  .banner-1 {
+    margin: 30px;
+    padding: 120px 60px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px 0px gray;
+    position: relative;
+    background-color: #bbefc6;
+  }
+
+  .banner-1 h1 {
+    padding: 20px;
+    text-align: right;
+  }
+
+  .banner-1 p {
+    padding: 20px;
+    text-align: right;
+  }
+
+  .banner-image-1 {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+  }
+
+  .logo img {
+    width: 75px;
+    height: 75px;
+  }
 }
