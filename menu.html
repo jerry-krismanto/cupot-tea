@@ -7,6 +7,7 @@
     <title>Menu :CupOT</title>
     <link rel="stylesheet" href="styles/menu-style.css">
     <link rel="icon" type="image" href="assets/logo/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <header>
@@ -25,9 +26,12 @@
         </nav>
     </header>
     <div class="side-menu" id="menuBtnContainer">
+        <h3 class="btn active" id="btnAll" onclick="filterSelection('all')">
+            Semua Produk
+        </h3>
         <h3>Hot Tea</h3>
         <ul>
-            <button class="btn active" onclick="filterSelection('classic-blk')">Classic Black</li>
+            <button class="btn" onclick="filterSelection('classic-blk')">Classic Black</li>
             <button class="btn" onclick="filterSelection('classic-grn')">Classic Green</button">
             <button class="btn" onclick="filterSelection('herbal')">Herbal</button>
             <button class="btn" onclick="filterSelection('oolong')">Oolong  </button>
@@ -39,107 +43,23 @@
             <button class="btn" onclick="filterSelection('blended')">Blended</button>
         </ul>
     </div>
-    <div class="catalogue">
-        <div class="menu-card filter-div classic-blk">
-            <div class="menu-card-img">
-                <img src="assets/menu/earl-grey.jpg" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Black</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-card filter-div classic-blk">
-            <div class="menu-card-img">
-                <img src="assets/menu/earl-grey.jpg" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Black</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-card filter-div classic-blk">
-            <div class="menu-card-img">
-                <img src="assets/menu/earl-grey.jpg" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Black</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-card filter-div classic-blk">
-            <div class="menu-card-img">
-                <img src="assets/menu/earl-grey.jpg" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Black</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-card filter-div classic-blk">
-            <div class="menu-card-img">
-                <img src="assets/menu/earl-grey.jpg" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Black</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-card filter-div classic-blk">
-            <div class="menu-card-img">
-                <img src="assets/menu/earl-grey.jpg" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Black</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-card filter-div classic-grn">
-            <div class="menu-card-img">
-                <img src="assets/menu/green-tea.png" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Green</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-card filter-div classic-grn">
-            <div class="menu-card-img">
-                <img src="assets/menu/green-tea.png" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Green</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-card filter-div classic-grn">
-            <div class="menu-card-img">
-                <img src="assets/menu/green-tea.png" alt="tea1">
-            </div>
-            <div class="menu-card-content">
-                <h3>Classic Green</h3>
-                <div class="card-button">
-                    <a href="order.html">Order Now</a>
-                </div>
-            </div>
-        </div>
+
+    <div id="app-catalog" class="catalogue">
+      <div v-for="tea in teas" :key="tea.id" class="menu-card filter-div" :class="tea.type">
+          <div class="menu-card-img">
+              <img v-bind:src="tea.img" alt="tea">
+          </div>
+          <div class="menu-card-content">
+              <h3>{{tea.name}}</h3>
+              <h3>{{formatPrice(tea.price)}}</h3>
+              <div class="card-button">
+                  <a href="order.html">Order Now</a>
+              </div>
+          </div>
+      </div>
     </div>
+
+    <script src="scripts/menu.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
