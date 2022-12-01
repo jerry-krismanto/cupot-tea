@@ -1,4 +1,4 @@
-filterSelection("classic-blk")
+filterSelection("all")
 function filterSelection(c){
     var x, i;
     x = document.getElementsByClassName("filter-div");
