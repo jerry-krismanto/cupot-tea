@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CupOT</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="icon" type="image" href="assets/logo/favicon.ico" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/http-vue-loader"></script>
+  <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app-product-detail">
+    <navbar></navbar>
+
+    <div class="mx-20 mt-10">
+
+      <h3 class="text-3xl font-semibold">Product</h3>
+
+      <div class="flex flex-col md:flex-row mt-5">
+        <img v-bind:src="product.img.fields.file.url" alt="tea" class="border-2" width="50%" style="max-width: 500px"/>
+        <div class="flex flex-col justify-between">
+          <div class="md:ml-5">
+            <div class="text-center md:text-left mt-5">
+              <h3 class="text-3xl font-bold">{{product.name}}</h3>
+              <h3 class="text-xl">{{formatPrice(product.price)}}</h3>
+              <h3 class="text-xl mt-5">{{product.desc}}</h3>
+            </div>
+          </div>
+
+          <div class="md:ml-5">
+            <div class="flex flex-col md:flex-row ">
+              <input min="1" type="number" class="w-20 h-10 border-2 border-black" v-model="quantity" />
+              <button class="w-40 h-10 mt-5 md:mt-0 md:ml-5 bg-black text-white" @click="addToCart">
+                ADD TO CART
+              </button>
+            </div>
+            <div class="text-xs mt-5">
+              <p>ID: {{product.id}}</p>
+              <p>CATEGORY: {{product.type}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-20 mt-10 mb-5">
+      <h3 class="text-3xl font-semibold">Related Products</h3>
+      <div class="flex flex-col md:flex-row justify-between mt-5">
+        <a v-for="relatedProduct in relatedProducts" :key="relatedProduct.id" class="flex flex-col items-center" style="width: 300px;" :href="'product_detail.html?id=' + relatedProduct.id">
+          <img v-bind:src="relatedProduct.img" alt="tea" class="border-2 border-gray-800" width="100%" />
+          <div>
+            <div class="text-center mt-5">
+              <h3 class="text-2xl font-semibold">{{relatedProduct.name}}</h3>
+              <h3 class="text-sm">{{formatPrice(relatedProduct.price)}}</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/product_detail.js"></script>
+</body>
+
+</html>

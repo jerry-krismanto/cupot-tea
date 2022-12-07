@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu :CupOT</title>
+    <link rel="stylesheet" href="styles/menu-style.css">
+    <link rel="icon" type="image" href="assets/logo/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app-menu">
+    <navbar></navbar>
+    <div class="side-menu" id="menuBtnContainer">
+        <h3 class="btn text-xl font-bold cursor-pointer" id="btnAll" @click="filterTea('')" :class="{active: filter === ''}">
+            Semua Produk
+        </h3>
+        <h3 class="text-xl font-bold">Hot Tea</h3>
+        <ul>
+            <button class="btn" @click="filterTea('classic-blk')" :class="{active: filter === 'classic-blk'}">
+              Classic Black
+            </button>
+            <button class="btn" @click="filterTea('classic-grn')" :class="{active: filter === 'classic-grn'}">
+              Classic Green
+            </button>
+            <button class="btn" @click="filterTea('herbal')" :class="{active: filter === 'herbal'}">
+              Herbal
+            </button>
+            <button class="btn" @click="filterTea('oolong')" :class="{active: filter === 'oolong'}">
+              Oolong
+            </button>
+        </ul>
+        <h3 class="text-xl font-bold">Iced Tea</h3>
+        <ul>
+            <button class="btn" @click="filterTea('blk-flav')" :class="{active: filter === 'blk-flav'}">
+              Black Flavoured
+            </button>
+            <button class="btn" @click="filterTea('green-flav')" :class="{active: filter === 'green-flav'}">
+              Green Flavoured
+            </button>
+            <button class="btn" @click="filterTea('blended')" :class="{active: filter === 'blended'}">
+              Blended
+            </button>
+        </ul>
+    </div>
+
+    <div class="catalogue">
+      <div v-if="isLoading" class="flex items-center justify-center">
+        <p class="text-4xl text-gray-300 font-semibold">Loading...</p>
+      </div>
+      <div v-else v-for="tea in teas" :key="tea.id" class="menu-card shadow-none border-2 border-gray-800 bg-gray-100 rounded-md filter-div" :class="tea.type">
+          <div class="menu-card-img">
+              <img v-bind:src="tea.img" alt="tea">
+          </div>
+          <div class="menu-card-content">
+              <h3>{{tea.name}}</h3>
+              <h3>{{formatPrice(tea.price)}}</h3>
+              <a :href="'product_detail.html?id=' + tea.id">
+                <div class="bg-green-700 text-white rounded p-3 flex justify-center">
+                  Detail
+                </div>
+              </a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/teas.js"></script>
+</body>
+</html>

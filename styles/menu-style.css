@@ -7,64 +7,6 @@
   font-family: "Nunito", sans-serif;
 }
 
-nav {
-  display: inline;
-  align-items: center;
-  position: relative;
-}
-
-nav ul {
-  position: relative;
-  bottom: 50px;
-  display: inline;
-  margin: 0;
-  text-align: right;
-  padding: 0;
-  float: right;
-}
-
-nav li {
-  display: inline;
-  list-style: none;
-  padding: 20px;
-  margin: 0;
-  font-weight: 400;
-  letter-spacing: 3px;
-}
-
-nav li a {
-  text-decoration: none;
-  color: black;
-}
-
-header {
-  padding: 5px;
-  position: relative;
-  box-shadow: 0 0px 10px 0 gray;
-}
-
-.logo {
-  margin-left: 20px;
-}
-
-.logo a {
-  text-decoration: none;
-}
-
-.logo img {
-  width: 75px;
-  height: 75px;
-}
-
-.logo h2 {
-  color: black;
-  display: inline;
-  position: relative;
-  bottom: 25px;
-  margin-left: 5px;
-  font-size: 36px;
-}
-
 .side-menu {
   padding-left: 100px;
   padding-top: 40px;
@@ -96,7 +38,6 @@ header {
   padding-left: 100px;
   position: absolute;
   margin-top: 40px;
-  padding: 20px;
 }
 
 .menu-card {
@@ -131,21 +72,13 @@ header {
 .card-button a {
   text-decoration: none;
   color: white;
-  padding: 10px;
+  padding: 10px 80px;
   border-radius: 10px;
-  background-color: #62d56f;
+  background-color: #4daf79;
 }
 
 .card-button a:hover {
-  background-color: #4caf50;
-}
-
-.filter-div {
-  display: none;
-}
-
-.show {
-  display: inline-block;
+  background-color: #29ad64;
 }
 
 .btn:hover {
@@ -162,7 +95,6 @@ header {
 @media screen and (max-width: 768px) {
   .side-menu {
     display: block;
-    margin: 10px;
     width: 100%;
     padding: 20px;
     background-color: #f1f1f1;

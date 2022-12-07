@@ -10,39 +10,27 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/http-vue-loader"></script>
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
     <div id="app-home">
       <navbar></navbar>
-      <div
-        class="banner border-gray-800 border-2 bg-gray-100 shadow-none rounded-md">
-        <h1 class="text-2xl font-bold">Try Our Tea Today</h1>
-        <p>
-          Winter is here, why not warm up and relax with a Cup O T?<br />
-          Order yours now and get 20% off our first timers discount
+
+      <div class="flex justify-between">
+        <img src="assets/images/tea-1.jpg" alt="tea" class="w-1/2" />
+        <p class="text-xl w-1/2 text-justify p-10">
+          <b>CupOT</b> adalah sebuah toko yang menyediakan berbagai macam jenis teh dan daun teh,
+          mulai dari <b>teh hijau, putih, oolong, dan merah</b>. Kami juga menyediakan berbagai
+          macam jenis daun teh, mulai dari daun teh gunung, daun teh kering.
+          <br/>
+          <br/>
+          Kualitas produk yang kami tawarkan adalah <b>kualitas terbaik</b>, karena kami hanya
+          menggunakan bahan baku yang berkualitas tinggi. Kami juga memiliki berbagai
+          macam varian produk, mulai dari produk yang murah, sampai produk yang mahal.
         </p>
-        <button class="bg-green-700 text-white rounded-md p-3 ml-5">
-          <a href="teas.html">Order Now</a>
-        </button>
-        <div class="banner-image">
-          <img src="assets/images/tea-1.jpg" alt="tea-1" />
-        </div>
       </div>
-      <div
-        class="banner-1 border-gray-800 border-2 bg-gray-100 shadow-none rounded-md">
-        <h1 class="text-2xl font-bold">Winter Special</h1>
-        <p>Warm up with our special selection for your special season</p>
-        <button
-          class="banner-button-right bg-green-700 text-white rounded-md p-3">
-          <a href="promo.html">Order Now</a>
-        </button>
-        <div class="banner-image-1">
-          <img src="assets/images/tea-2.jpg" alt="tea-2" />
-        </div>
-      </div>
+     
+
       <footer class="bg-gray-800">
         <div class="about">
           <a href="index.html">
@@ -50,7 +38,7 @@
           </a>
           <a href="about.html">
             <h2>About Us</h2>
-          </a>
+          </a> 
           <ul>
             <a href="teas.html">
               <li class="py-2">Our Tea</li>

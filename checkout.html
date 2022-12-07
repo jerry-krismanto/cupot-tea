@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CupOT</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" type="image" href="assets/logo/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app-checkout">
+      <navbar></navbar>
+      
+      <div class="mx-20 mt-10">
+        <h3 class="font-semibold text-3xl">Checkout</h3>
+
+        <form id="checkoutForm" class="my-8">
+          <!--create with tailwindcss and v-model  -->
+          <div class="flex flex-col">
+            <label for="name" class="font-bold text-md">Nama</label>
+            <input type="text" id="name" name="name" v-model="name" class="border-2 border-gray-300 p-2 rounded-md" placeholder="Masukkan nama.." />
+          </div>
+          <div class="flex flex-col mt-4">
+            <label for="email" class="font-bold text-md">Email</label>
+            <input type="email" id="email" name="email" v-model="email" class="border-2 border-gray-300 p-2 rounded-md" placeholder="Masukkan email.." />
+          </div>
+          <div class="flex flex-col mt-4">
+            <label for="phone" class="font-bold text-md">Nomor Telepon</label>
+            <input type="text" id="phone" name="phone" v-model="phone" class="border-2 border-gray-300 p-2 rounded-md" placeholder="Masukkan nomor telepon.." />
+          </div>
+          <div class="flex flex-col mt-4">
+            <label for="address" class="font-bold text-md">Alamat</label>
+            <input type="text" id="address" name="address" v-model="address" class="border-2 border-gray-300 p-2 rounded-md" placeholder="Masukkan alamat.." />
+          </div>
+        </form>
+
+        <h3 class="font-semibold text-3xl">Total Produk</h3>
+        <div v-for="cart in carts" class="flex flex-row justify-between items-center mt-5 border-2 bg-gray-200 border-gray-800 p-4 rounded-md">
+          <a :href='`/product_detail.html?id=${cart.id}`'>
+          <div class="flex flex-row items-center">
+              <img class="w-20 h-20" :src="cart.img" alt="tea" />
+              <div class="flex flex-col ml-5">
+                <h1 class="text-2xl">{{ cart.name }}</h1>
+                <p class="text-sm">{{ formatPrice(cart.price) }} x {{ cart.quantity }} = {{ formatPrice(cart.price * cart.quantity) }}</p>
+              </div>
+            </div>
+          </a>
+      </div>
+
+      <div class="flex flex-row justify-between items-center mt-5 bg-gray-800 text-white p-4 rounded-md mb-8">
+        <div class="flex flex-row items-center">
+          <h1 class="text-2xl">Total:</h1>
+          <p class="ml-5 text-2xl font-bold">{{ formatPrice(totalPrice) }}</p>
+        </div>
+      
+        <button class="bg-green-700 text-white rounded p-3" @click="pay">
+          Bayar
+        </button>
+      </div>
+      
+    </div>
+
+    <script src="scripts/checkout.js"></script>
+  </body>
+</html>

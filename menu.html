@@ -43,7 +43,6 @@
             <button class="btn" onclick="filterSelection('blended')">Blended</button>
         </ul>
     </div>
-<<<<<<< HEAD
     <div class="catalogue">
         <a href="product.html">
             <div class="menu-card filter-div classic-blk">
@@ -146,22 +145,6 @@
                 </div>
             </div>
         </div>
-=======
-
-    <div id="app-catalog" class="catalogue">
-      <div v-for="tea in teas" :key="tea.id" class="menu-card filter-div" :class="tea.type">
-          <div class="menu-card-img">
-              <img v-bind:src="tea.img" alt="tea">
-          </div>
-          <div class="menu-card-content">
-              <h3>{{tea.name}}</h3>
-              <h3>{{formatPrice(tea.price)}}</h3>
-              <div class="card-button">
-                  <a href="order.html">Order Now</a>
-              </div>
-          </div>
-      </div>
->>>>>>> cb28e5757f9d135c6cf788a1c636e35e239021f9
     </div>
 
     <script src="scripts/menu.js"></script>
